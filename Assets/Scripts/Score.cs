@@ -15,6 +15,7 @@ public class Score : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        score.text = "SCORE: " + scoreValue; 
+        score.text = "TEAM 1 : " + scoreValue; 
 	}
 }
+// Add this to points objects "ScoreScript.scorevalue += 10;" //

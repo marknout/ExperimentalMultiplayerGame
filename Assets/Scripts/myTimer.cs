@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class myTimer : MonoBehaviour {
 
-    public float timerCountdown=60;
+    public float timerCountdown=3;
     public Text timerText;
+    private bool timerIsActive = true;
 
 	// Use this for initialization
 	void Start () {
@@ -15,7 +16,14 @@ public class myTimer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        timerCountdown -= Time.deltaTime;
-        timerText.text = timerCountdown.ToString("f0");
+        if(timerIsActive){
+            timerCountdown -= Time.deltaTime;
+            timerText.text = timerCountdown.ToString("f0");
+            if (timerCountdown <= 0){
+                timerCountdown = 0;
+                timerIsActive = false;
+            }
+        }
+       
 	}
 }
