@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class myTimer : MonoBehaviour {
 
@@ -22,6 +23,7 @@ public class myTimer : MonoBehaviour {
             if (timerCountdown <= 0){
                 timerCountdown = 0;
                 timerIsActive = false;
+                SceneManager.LoadScene("MATHIAS");
             }
         }
        

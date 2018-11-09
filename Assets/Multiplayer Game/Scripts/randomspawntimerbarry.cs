@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class randomspawntimer : MonoBehaviour
+public class randomspawntimerbarry : MonoBehaviour
 {
 
     private bool Spawn1 = false;
@@ -11,7 +11,7 @@ public class randomspawntimer : MonoBehaviour
 
     void Start()
     {
-        STimer = Random.Range(2f, 10f);
+        STimer = Random.Range(2f, 30f);
 		StartCoroutine(Timer());
     }
 
@@ -20,7 +20,7 @@ public class randomspawntimer : MonoBehaviour
         if (Spawn1 == true)
         {
             Instantiate(Food, transform.position, transform.rotation);
-			STimer = Random.Range(5f, 10f);
+			STimer = Random.Range(30f, 40f);
 			StartCoroutine(Timer());
 
         }
