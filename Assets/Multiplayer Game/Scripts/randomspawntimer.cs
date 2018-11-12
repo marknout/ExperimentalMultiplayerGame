@@ -11,7 +11,7 @@ public class randomspawntimer : MonoBehaviour
 
     void Start()
     {
-        STimer = Random.Range(1f, 10f);
+        STimer = Random.Range(2f, 10f);
 		StartCoroutine(Timer());
     }
 
