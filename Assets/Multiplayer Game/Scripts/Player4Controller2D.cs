@@ -7,6 +7,14 @@ public class Player4Controller2D : MonoBehaviour
     public ScoreTeam2 score;
     private float xPos;
     public float minX, maxX;
+    public GameObject Points50;
+    public GameObject Points10;
+    public GameObject Points100;
+    public GameObject Sparkes;
+    public Transform visual;
+
+
+
 
     private void Start()
     {
@@ -24,14 +32,66 @@ public class Player4Controller2D : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        score.scoreValue2 += 10;
+        if (col.CompareTag("Shit"))
+        {
+            speeds = speeds - 1;
+            score.scoreValue2 -= 20;
+        }
+
+
+        if (col.CompareTag("Gold"))
+        {
+            speeds = speeds + 1;
+            score.scoreValue2 = score.scoreValue2 + 100;
+            Instantiate(Points100, transform);
+            Instantiate(Sparkes, visual.transform);
+            //Points100.SetActive(true);
+            //Sparkes.SetActive(true);
+        }
+        else
+        {
+            //Points100.SetActive(false);
+            //Sparkes.SetActive(false);
+        }
+
 
         if (col.CompareTag("Barry"))
         {
-            score.scoreValue2 += 40;
+            score.scoreValue2 += 50;
+            Instantiate(Points50, transform);
+            Instantiate(Sparkes, visual.transform);
+            //Points50.SetActive(true);
+            //Sparkes.SetActive(true);
         }
+        else
+        {
+            //Points50.SetActive(false);
+            //Sparkes.SetActive(false);
+        }
+
+
+        if (col.CompareTag("Food"))
+        {
+            score.scoreValue2 += 10;
+            Instantiate(Points10, transform);
+            Instantiate(Sparkes, visual.transform);
+            //Points10.SetActive(true);
+            //Sparkes.SetActive(true);
+        }
+        else
+        {
+            //Points10.SetActive(false);
+            //Sparkes.SetActive(false);
+        }
+
 
     }
 
 
+
+
 }
+
+
+
+
