@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Multiplayer Game/Scripts/PickUp.cs.meta
+guid: a3791a9b5f91f6b44b6a85a833bdb688
+=======
 guid: 88d60a25fb8e648d491b8ab39a1abf0b
+>>>>>>> 5d1e08991c7dfbb68ab54a9ba6eeb7c2652a3b4c:Assets/Multiplayer Game/Scripts/PickUp.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
