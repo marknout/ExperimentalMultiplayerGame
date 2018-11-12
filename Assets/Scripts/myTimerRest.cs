@@ -4,14 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class myTimer : MonoBehaviour
+public class myTimerRest : MonoBehaviour
 {
 
     public float timerCountdown = 3;
     public float prePause = 6.0f;
     public Text timerText;
     private bool timerIsActive = true;
-    public AudioSource audioSourceShit;
 
     // Use this for initialization
     void Start()
@@ -44,7 +43,7 @@ public class myTimer : MonoBehaviour
                 if (timerCountdown <= 0)
                    
                 {
-                    audioSourceShit.Play();
+                    SceneManager.LoadScene("MainMenu");
                     timerCountdown = 0;
                     timerIsActive = false;
                     
