@@ -3,18 +3,60 @@ using System.Collections;
 
 public class Sound : MonoBehaviour
 {
-    private AudioSource audioSource;
+    public AudioSource audioSourceShit;
+    public AudioSource audioSourceFood;
+    public AudioSource audioSourceBarry;
+    public AudioSource audioSourcePickUp;
+    public AudioSource audioSourcePickUpFood;
+    public AudioSource audioSourcePickUpBarry;
+    public AudioSource audioSourcePickUpShit;
+    public AudioSource audioSourcePickUpGold;
+    public AudioSource audioSourceGoldenFood;
 
-    public AudioSource Scored;
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D col)
     {
-       
-            audioSource = GetComponent<AudioSource>();
 
-            audioSource.Play();
         
 
-    }
+        
+            if (col.CompareTag("Shit"))
+            {
+            audioSourceShit.Play();
+            audioSourcePickUpShit.Play();
+
+        }
+
+
+        
+            if (col.CompareTag("Food"))
+                {
+            audioSourceFood.Play();
+            audioSourcePickUpFood.Play();
+            
+
+        }
+
+
+        {
+            if (col.CompareTag("Barry"))
+                 {
+            audioSourceBarry.Play();
+            audioSourcePickUp.Play();
+            audioSourcePickUpBarry.Play();
+            }
+
+            if (col.CompareTag("Gold"))
+            {
+                
+                audioSourcePickUp.Play();
+                audioSourcePickUpGold.Play();
+                audioSourceGoldenFood.Play();
+            }
+
+
+
+
+        }
    
+}
 }
