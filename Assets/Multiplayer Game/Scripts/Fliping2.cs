@@ -19,8 +19,8 @@ public class Fliping2 : MonoBehaviour
     {
         
 
-        if (Input.GetAxis("Horizontal2") < -0.1f) { transform.localScale = new Vector3(-1, 1, 1); }
-        if (Input.GetAxis("Horizontal2") > 0.1f) { transform.localScale = new Vector3(1, 1, 1); }
+        if (Input.GetAxis("Horizontal2") < -0.1f) { transform.localScale = new Vector3(-2, 2, 1); }
+        if (Input.GetAxis("Horizontal2") > 0.1f) { transform.localScale = new Vector3(2, 2, 1); }
 
         
 
