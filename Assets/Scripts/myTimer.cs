@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class myTimer : MonoBehaviour
 {
-
+    //public int scoreValue1;
+   //public int scoreValue2;
     public float timerCountdown = 3;
     public float prePause = 6.0f;
     public Text timerText;
@@ -42,8 +43,20 @@ public class myTimer : MonoBehaviour
                 timerCountdown -= Time.deltaTime;
                 timerText.text = timerCountdown.ToString("f0");
                 if (timerCountdown <= 0)
-                   
                 {
+                    //if (scoreValue1 > scoreValue2)
+                   // {
+                   //     SceneManager.LoadScene("RedWin");
+                  //  }
+                  //  else if (scoreValue1 < scoreValue2)
+                  //  {
+                  //      SceneManager.LoadScene("PurpleWin");
+                  //  }
+                  //  else
+                  //  { // The two scores are equal
+                  //      SceneManager.LoadScene("MATHIAS");
+                 //   }
+
                     audioSourceShit.Play();
                     timerCountdown = 0;
                     timerIsActive = false;
